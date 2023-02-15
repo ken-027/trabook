@@ -1,0 +1,85 @@
+@use '../config/variables' as *;
+@use '../mixins/responsive' as *;
+@use '../config/animation' as *;
+@use '../mixins/index' as *;
+
+.header {
+  position: relative;
+  min-height: 90vh;
+  // min-height: 100vh;
+  // padding-bottom: 10vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  text-align: center;
+  max-width: $desktop;
+  padding-inline: $space_8;
+  padding-block: $space_10;
+  align-items: center;
+  margin: auto;
+  // background-color: $primary-light-color;
+  @include tablet {
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    gap: $space_20;
+  }
+  @include laptop {
+    padding-inline: $space_12;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: $space_8;
+  justify-content: center;
+  gap: $space_4;
+  @include tablet {
+    width: 40%;
+    align-items: flex-start;
+    gap: $space_8;
+  }
+  p {
+    @include laptop {
+      font-size: x-large;
+      color: $text-color;
+    }
+  }
+}
+
+.subTitle {
+  font-weight: bold;
+  @include laptop {
+    font-size: x-large;
+  }
+}
+
+.button {
+  @include button;
+  background-color: $white !important;
+  color: $primary-color !important;
+  border: 1px solid $primary-color;
+  &:hover {
+    background-color: $primary-color !important;
+    color: $white !important;
+  }
+}
+
+.image {
+  position: relative;
+  // display: grid;
+  // place-items: center;
+  @include tablet {
+    width: 40%;
+  }
+  img {
+    margin: auto;
+    @include tablet {
+      margin: unset;
+    }
+  }
+}

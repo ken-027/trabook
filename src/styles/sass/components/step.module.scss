@@ -1,0 +1,87 @@
+@use '../config/variables' as *;
+@use '../mixins/responsive' as *;
+@use '../config/animation' as *;
+@use '../mixins/index' as *;
+
+.section {
+  background-color: $light-color;
+  min-height: 80vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: $desktop;
+  gap: $space_6;
+  align-items: center;
+  text-align: center;
+  h3 {
+    color: $text-color;
+    @include laptop {
+      font-size: large;
+      width: 45%;
+      margin: auto;
+    }
+  }
+}
+
+.span {
+  font-weight: inherit;
+  font-family: inherit;
+  color: $primary-color;
+}
+
+.list {
+  display: flex;
+  // flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-block: $space_6;
+  gap: $space_10;
+}
+
+.item {
+  background-color: #fff;
+  border-radius: $space_2;
+  padding: $space_6 $space_8;
+  text-align: center;
+  width: 100%;
+  max-width: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space_3;
+  @include laptop {
+    padding-inline: $space_4;
+  }
+  div {
+    width: 70%;
+    max-width: 100px;
+    > div {
+      margin: auto;
+      svg {
+        aspect-ratio: 1/1;
+        object-fit: contain;
+        width: 100%;
+        height: fit-content;
+      }
+    }
+  }
+  h5 {
+    font-weight: bold;
+    font-family: $secondary-font;
+    font-size: larger;
+    @include laptop {
+      font-size: x-large;
+    }
+  }
+  p {
+    font-size: smaller;
+    color: $text-color;
+    @include laptop {
+      font-size: large;
+    }
+  }
+}

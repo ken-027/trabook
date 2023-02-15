@@ -1,0 +1,70 @@
+@use './variables' as var;
+
+@keyframes pulsing {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+@keyframes swipedown {
+  0% {
+    transform: translateY(-3%);
+  }
+
+  50% {
+    transform: translateY(2%);
+  }
+  100% {
+    transform: translateY(-3%);
+  }
+}
+
+@keyframes sliding {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(40%);
+  }
+  // 100% {
+  //   transform: translatex(0);
+  // }
+}
+
+@keyframes scaling {
+  0% {
+    filter: brightness(100%);
+    // backdrop-filter: blur(0);
+  }
+  50% {
+    filter: brightness(110%);
+    // backdrop-filter: blur(10px);
+  }
+  100% {
+    filter: brightness(100%);
+    // backdrop-filter: blur(0);
+  }
+}
+
+@keyframes bubbling {
+  0% {
+    margin-top: 5px;
+    // top: 10px;
+    // transform: translateY(-10px);
+  }
+  50% {
+    margin-top: 0;
+    // top: -10px;
+    // transform: translateY(10px);
+  }
+  100% {
+    margin-top: 5px;
+    // top: 10px;
+    // transform: translateY(-10px);
+  }
+}

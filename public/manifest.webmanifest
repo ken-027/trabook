@@ -1,0 +1,19 @@
+{
+  "name": "Agency Match",
+  "short_name": "Agency Match",
+  "display": "standalone",
+  "display_override": ["window-control-overlay", "minimal-ui"],
+  "start_url": "./trabook",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "icons": [
+    {
+      "src": "./icon-256.png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "./icon-128.png",
+      "sizes": "128x128"
+    }
+  ]
+}
